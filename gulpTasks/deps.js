@@ -30,7 +30,7 @@ gulp.task('deps.css', function() {
             'node_modules/admin-lte/dist/css/skins/_all-skins.min.css'
         ])
         .pipe(concat('deps.min.css'))
-        .pipe(uglifycss({ "uglyComments": true }))
+        .pipe(uglifycss({ 'uglyComments': true }))
         .pipe(gulp.dest('public/assets/css'))
 })
 
