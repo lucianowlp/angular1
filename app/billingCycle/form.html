@@ -1,18 +1,18 @@
 <div role="form">
     <div class="box-body">
         <field id="name" label="Nome" grid="12 6 4" place-holder="Informe o nome"
-        model="bcCtrl.billingCycle.name" ></field>
+        model="bcCtrl.billingCycle.name" readonly="bcCtrl.tabDelete" ></field>
         <field id="month" label="Mês" grid="12 6 4" place-holder="Informe o mês"
-        model="bcCtrl.billingCycle.month" type="number"></field>
+        model="bcCtrl.billingCycle.month" readonly="bcCtrl.tabDelete" type="number"></field>
         <field id="year" label="Ano" grid="12 6 4" place-holder="Informe o ano"
-        model="bcCtrl.billingCycle.year" type="number"></field>
+        model="bcCtrl.billingCycle.year" readonly="bcCtrl.tabDelete" type="number"></field>
     </div>
     <div class="box-footer">
         <button class="btn btn-primary" ng-click="bcCtrl.create()"
         ng-if="bcCtrl.tabList">Incluir</button>
-        <button class="btn btn-info"
+        <button class="btn btn-info" ng-click="bcCtrl.update()"
         ng-if="bcCtrl.tabUpdate">Alterar</button>
-        <button class="btn btn-danger"
+        <button class="btn btn-danger" ng-click="bcCtrl.delete()"
         ng-if="bcCtrl.tabDelete">Excluir</button>
         <button class="btn btn-default" ng-click="bcCtrl.refresh()">Cancelar</button>
     </div>
